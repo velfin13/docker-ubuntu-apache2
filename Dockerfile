@@ -4,4 +4,6 @@ RUN apt install -y apache2
 RUN apt install -y apache2-utils 
 RUN apt clean 
 EXPOSE 80
+
+COPY page /var/www/html
 CMD ["apache2ctl", "-D", "FOREGROUND"]
